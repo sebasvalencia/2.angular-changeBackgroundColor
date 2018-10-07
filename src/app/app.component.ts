@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angularChangeColorBackground';
+  title = 'Angular Change Background Color';
+
+  changeBackgroundColor() {
+    console.log('Color has been successfully changed!');
+  }
+
 }
