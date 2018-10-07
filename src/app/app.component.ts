@@ -10,9 +10,19 @@ export class AppComponent {
   bodyTag: HTMLBodyElement = document.getElementsByTagName('body')[0];
 
   changeBackgroundColor() {
-    console.log('Color has been successfully changed!', );
+    console.log('Color has been successfully changed!');
     console.log('body: ', this.bodyTag);
-    this.bodyTag.style.backgroundColor = 'green';
+
+    this.bodyTag.style.backgroundColor = this.createHexColor();
+  }
+
+  createHexColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16 )];
+    }
+    return '#' + color;
   }
 
 }
